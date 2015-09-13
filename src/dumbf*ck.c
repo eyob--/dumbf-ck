@@ -9,10 +9,11 @@ g(char c) {
 		case '>':
 			p--; break;
 		case '.':
-			*p ^= 1 << 0; break;
+			*p ^= 1; break;
 		case ',':
 			printf("%c",*p); break;
-
+		case '/':
+			*p = (*p >> 3) | (*p << 5); break;
 	}
 }
 
