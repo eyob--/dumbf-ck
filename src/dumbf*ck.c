@@ -10,7 +10,7 @@ g(char c) {
 			p++; break;
 		case '!':
 			*p ^= 1 << 0; break;
-		case ',':
+		case '.':
 			printf("%c",*p); break;
 	}
 }
