@@ -5,9 +5,9 @@ char s[5000], *p = s;
 g(char c) {
 	switch (c) {
 		case '<':
-			p++; break;
-		case '>':
 			p--; break;
+		case '>':
+			p++; break;
 	}
 }
 
