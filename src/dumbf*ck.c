@@ -20,6 +20,8 @@ g(char c) {
 			*p ^= 1; break;
 		case ',':
 			printf("%c",*p); break;
+		case '\'':
+			scanf("%c",p); break;
 		case '/':
 			*p = (*p >> 3) | (*p << 5); break;
 	}
