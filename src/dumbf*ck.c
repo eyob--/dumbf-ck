@@ -8,7 +8,7 @@ g(char c) {
 			p--; break;
 		case '>':
 			p++; break;
-		case '.':
+		case '!':
 			*p ^= 1 << 0; break;
 		case ',':
 			printf("%c",*p); break;
