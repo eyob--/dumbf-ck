@@ -4,18 +4,9 @@ unsigned char s[5000], *p = s;
 long q = 0;
 int x = 0;
 
-void printbinchar(char c)
-{
-	for (int i = 7; i >= 0; --i)
-    {
-        putchar( (c & (1 << i)) ? '1' : '0' );
-    }
-}
-
 g(char c, FILE *f) {
 	char u;
 	if (x){if (c == '?') x = 0; return 0;}
-	//printf("\n%d\n",q);
 
 	switch (c) {
 		case '<':
@@ -33,12 +24,6 @@ g(char c, FILE *f) {
 		case '?':
 			if (*p % 2 == 0){ q = ftell(f); x = 1;} else {fseek(f, q+1, SEEK_SET);} break;
 	}
-	/*printbinchar(*p);
-	printf(" ");
-	printbinchar(*p >> 3);
-	printf(" ");
-	printbinchar(*p << 5);
-	printf(" %p %c\n", p, c);*/
 }
 
 main(int a, char** b) {
