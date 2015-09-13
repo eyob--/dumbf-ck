@@ -1,7 +1,14 @@
 #include <stdio.h>
 
-g(char c) {
+char s[5000], *p = s;
 
+g(char c) {
+	switch (c) {
+		case '<':
+			p++; break;
+		case '>':
+			p--; break;
+	}
 }
 
 main(int a, char** b) {
