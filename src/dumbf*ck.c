@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-char s[5000], *p = s;
+unsigned char s[5000], *p = s;
 
 void printbinchar(char c)
 {
@@ -24,7 +24,11 @@ g(char c) {
 			*p = (*p >> 3) | (*p << 5); break;
 	}
 	printbinchar(*p);
-	printf(" %p\n", p);
+	printf(" ");
+	printbinchar(*p >> 3);
+	printf(" ");
+	printbinchar(*p << 5);
+	printf(" %p %c\n", p, c);
 }
 
 main(int a, char** b) {
