@@ -2,6 +2,14 @@
 
 char s[5000], *p = s;
 
+void printbinchar(char c)
+{
+	for (int i = 7; i >= 0; --i)
+    {
+        putchar( (c & (1 << i)) ? '1' : '0' );
+    }
+}
+
 g(char c) {
 	switch (c) {
 		case '<':
@@ -15,6 +23,8 @@ g(char c) {
 		case '/':
 			*p = (*p >> 3) | (*p << 5); break;
 	}
+	printbinchar(*p);
+	printf(" %p\n", p);
 }
 
 main(int a, char** b) {
