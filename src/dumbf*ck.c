@@ -23,12 +23,12 @@ g(char c) {
 		case '/':
 			*p = (*p >> 3) | (*p << 5); break;
 	}
-	printbinchar(*p);
+	/*printbinchar(*p);
 	printf(" ");
 	printbinchar(*p >> 3);
 	printf(" ");
 	printbinchar(*p << 5);
-	printf(" %p %c\n", p, c);
+	printf(" %p %c\n", p, c);*/
 }
 
 main(int a, char** b) {
